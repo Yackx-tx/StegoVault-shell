@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stegovault"
+version = "0.1.0"
+description = "StegoVault: hide authenticated encrypted messages inside PNG images"
+requires-python = ">=3.10"
+dependencies = [
+    "Pillow>=10.0.0",
+    "cryptography>=42.0.0",
+]
+
+[project.scripts]
+stegovault = "stegocrypt.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
