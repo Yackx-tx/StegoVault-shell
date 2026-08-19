@@ -25,7 +25,7 @@ On Windows, use Git Bash or WSL. JPEG images are not supported as output because
 
 ```bash
 git clone https://github.com/Yackx-tx/StegoVault-shell
-cd stegovault
+cd StegoVault-shell
 chmod +x install.sh stegovault.sh
 ./install.sh
 ```
