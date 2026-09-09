@@ -6,7 +6,7 @@ The Bash application is a shell interface around the StegoVault Python engine. M
 
 ## Project Information
 
-- Application: StegoVault v0.1.0
+- Application: StegoVault v0.2.0
 - Author: Yannick Gisubizo
 - Website: https://yackx.vercel.app
 - GitHub: https://github.com/Yackx-tx
@@ -34,21 +34,36 @@ The installer installs the Python dependencies and registers the local Python pa
 
 ## Launch The Application
 
-Start the interactive application with:
+Start the **Cyberpunk Interactive Dashboard** by running:
 
 ```bash
 ./stegovault.sh
 ```
 
-The menu provides two toggleable actions:
+Upon launching, you will be greeted by the StegoVault ASCII banner and the interactive TUI (Terminal User Interface).
 
-1. Press `e` to toggle Encryption.
-2. Press `d` to toggle Decryption.
-3. Press `r` to run the selected actions.
-4. Enter the input image, message, password, and result paths when prompted.
-5. Press `q` to quit.
+```text
+ ███████╗████████╗███████╗ ██████╗  ██████╗ ██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗
+ ██╔════╝╚══██╔══╝██╔════╝██╔════╝ ██╔═══██╗██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝
+ ███████╗   ██║   █████╗  ██║  ███╗██║   ██║██║   ██║███████║██║   ██║██║     ██║   
+ ╚════██║   ██║   ██╔══╝  ██║   ██║██║   ██║╚██╗ ██╔╝██╔══██║██║   ██║██║     ██║   
+ ███████║   ██║   ███████╗╚██████╔╝╚██████╔╝ ╚████╔╝ ██║  ██║╚██████╔╝███████╗██║   
+ ╚══════╝   ╚═╝   ╚══════╝ ╚═════╝  ╚═════╝   ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝   
+```
 
-Encryption and decryption can both be selected in one session. Each selected action runs in sequence with its own prompts.
+### Navigating the Vault Operations
+
+The dashboard provides a visual toggle menu for your cryptographic workflows:
+
+1. **Toggle Modes**: 
+   - Press `E` to toggle **Encryption** mode.
+   - Press `D` to toggle **Decryption** mode.
+   - When active, the UI will light up in green to show a `[✓]` next to the selected operation.
+2. **Execute**: Press `R` to run the selected actions.
+3. **Follow the Prompts**: StegoVault will guide you through the process, explicitly asking for your `.png` file paths (use just the filename if it's in the current folder, or the full path if it's elsewhere), the secret message, and your secure password. 
+4. **Exit**: Press `Q` to safely exit the application and secure the terminal.
+
+Encryption and decryption can both be selected in a single session. Each active operation will run sequentially with its own beautifully formatted prompts.
 
 ## Encrypt A Message
 
